@@ -1,0 +1,27 @@
+body {
+    background-image: url("maths.jpg");
+    font-family: 'Macondo', cursive;
+    font-weight: 900;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    border-radius: 5px;
+    color: purple;
+    margin: 10px;
+}
+form {
+    color: purple;
+}
+input {
+    margin: 10px;
+}
+.content {
+    background-color: #DD5555;
+    border: 10px solid purple;
+    border-radius: 20px;
+    margin-top:50px;
+    padding: 40px 10px;
+    text-align: center;
+}
