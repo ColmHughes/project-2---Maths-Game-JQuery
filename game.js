@@ -16,7 +16,16 @@ function setMultiplicationGame() {
     $("#myForm").attr("data-gametype", "multiplication");
     multiplicationQuiz();
 }
+         
+function setDivisionGame() {
+    $("#myForm").attr("data-gametype", "division");
+    divisionQuiz();
+}
 
+function setExponentialGame() {
+    $("#myForm").attr("data-gametype", "exponential");
+    exponentialQuiz();
+}
 
 function additionQuiz() {
     let num1 = Math.floor(Math.random() * 50);
@@ -45,6 +54,19 @@ function multiplicationQuiz() {
     $("[name=rightAnswer]").val(num1 * num2);
 }
 
+function divisionQuiz() {
+    let num1 = Math.floor(Math.random() * 50);
+    let num2 = Math.floor(Math.random() * 12) + 1;
+    let num3 = num1 * num2;
+    $("#question").text("What is: " + num3 + " / " + num2 + "?");
+    $("[name=rightAnswer]").val(num3 / num2);    
+}
+
+function exponentialQuiz() {
+    let num1 = Math.floor(Math.random() * 50);
+    $("#question").text("What is: " + num1 + "^2?");
+    $("[name=rightAnswer]").val(num1 ** 2);    
+}
 
 function checkAnswer() {
     let gametype = $("#myForm").attr("data-gametype");
@@ -67,6 +89,12 @@ function checkAnswer() {
     }
     if (gametype == "multiplication") {
         multiplicationQuiz();
+    }
+    if (gametype == "division") {
+        divisionQuiz();
+    }
+    if (gametype == "exponential") {
+        exponentialQuiz();
     }
 }
 
